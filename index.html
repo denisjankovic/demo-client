@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Offre Integration Custom - BackYou → HubSpot</title>
+    <meta
+      name="description"
+      content="Découvrez l'intégration sur-mesure BackYou × HubSpot pour automatiser vos processus, améliorer votre productivité et optimiser votre écosystème professionnel."
+    />
+    <meta
+      name="title"
+      content="Intégration BackYou × HubSpot - Automatisez vos Processus"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,6 +19,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="https://147540740.fs1.hubspotusercontent-eu1.net/hubfs/147540740/logo-jd-v2.0-500x500.png"
+      type="image/x-icon"
+    />
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
@@ -399,7 +412,7 @@
                   <div class="recap-details">
                     <div class="recap-item-title">Intégration initiale</div>
                     <div class="recap-item-desc">
-                      50% avant développement, 50% à la livraison
+                      50% d'acompte, 50% à la livraison
                     </div>
                   </div>
                   <div class="recap-price">
@@ -416,7 +429,7 @@
                 >
                   <div class="recap-section-header">
                     <div class="recap-icon" id="recapPlanIcon">
-                      <i data-lucide="package"></i>
+                      <i data-lucide="layers"></i>
                     </div>
                     <div class="recap-details">
                       <div class="recap-item-title" id="recapPlanTitle">
@@ -425,7 +438,9 @@
                       <div class="recap-item-desc">Services inclus :</div>
                     </div>
                     <div class="recap-price">
-                      <span class="recap-amount" id="recapPlanPrice">0€</span>
+                      <span class="recap-amount" id="recapPlanPrice">
+                        <span class="annual-discount">2 mois offerts</span>0€
+                      </span>
                       <span class="recap-period" id="recapPlanPeriod"
                         >/mois</span
                       >
@@ -783,8 +798,10 @@
         lucide.createIcons();
 
         if (isAnnual) {
-          recapPlanPrice.textContent =
-            annualPrice.toLocaleString("fr-FR") + "€";
+          recapPlanPrice.innerHTML =
+            '<span class="annual-discount">2 mois offerts</span>' +
+            annualPrice.toLocaleString("fr-FR") +
+            "€";
           recapPlanPeriod.textContent = "/an";
 
           // Calculate totals for annual
