@@ -717,7 +717,11 @@
         const plan = card.dataset.plan;
         const monthlyPrice = parseInt(card.dataset.priceMonthly);
         const annualPrice = parseInt(card.dataset.priceAnnual);
-        const initialCost = 4400;
+        // Get initial cost from CSS variable
+        const initialCostStr = getComputedStyle(document.documentElement)
+          .getPropertyValue("--initial-price")
+          .trim();
+        const initialCost = parseInt(initialCostStr) || 4400;
 
         // Keep default visible, show selection and toggle
         defaultIntegration.style.display = "flex";
