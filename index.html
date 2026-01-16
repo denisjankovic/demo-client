@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offre Integration Custom - BackYou → HubSpot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Top Header Bar -->
+    <div class="top-header">
+      <div class="top-header-content">
+        <div class="logo-box">
+          <img
+            src="https://dimacco.fr/wp-content/uploads/LOGO-BLEU.svg"
+            alt="Dimacco"
+            class="top-header-logo"
+          />
+        </div>
+        <span class="separator">×</span>
+        <div class="jd-section">
+          <img
+            src="https://147540740.fs1.hubspotusercontent-eu1.net/hubfs/147540740/logo-jd-v2.0-500x500.png"
+            alt="JD Integrations"
+            class="jd-logo"
+          />
+          <span>JD Integrations</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <!-- Main Title Area -->
+        <div class="hero-main">
+          <h1>Integration BackYou × HubSpot</h1>
+          <p class="hero-subtitle">
+            Automatisez vos processus et boostez votre productivité avec une
+            intégration sur-mesure
+          </p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 3v18" />
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value">4 400€</span>
+              <span class="stat-label">Développement initial</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value">4 offres</span>
+              <span class="stat-label">Solutions au choix</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-highlight">
+            <div class="stat-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value">À partir de 299€</span>
+              <span class="stat-label">Par mois</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offres Section -->
+    <main>
+      <section class="offers-section">
+        <h2>Intégration sur-mesure : Automatisez votre écosystème</h2>
+        <p class="offers-subtitle">
+          Choisissez votre niveau de service et visualisez votre investissement
+          total
+        </p>
+
+        <!-- Price Simulator -->
+        <div class="price-simulator">
+          <div class="simulator-grid">
+            <!-- Base Integration - Always included -->
+            <div class="simulator-card base-card">
+              <h4 class="simulator-card-title">INTEGRATION</h4>
+              <div class="simulator-card-price">
+                <span class="sim-price-wrapper">
+                  <span class="sim-price-main">4 400€</span>
+                  <span class="sim-price-sub" style="color: #9d9d9d"
+                    >développement initial</span
+                  >
+                </span>
+              </div>
+              <p class="sim-subtitle">
+                <span style="color: #9d9d9d; font-weight: 400"
+                  >Offre de base :</span
+                >
+              </p>
+              <ul class="sim-services">
+                <li><i data-lucide="clipboard-list"></i>Analyse & cadrage</li>
+                <li><i data-lucide="share-2"></i>Conception du flux</li>
+                <li><i data-lucide="code"></i>Développement sur-mesure</li>
+                <li><i data-lucide="check-circle"></i>Tests et validation</li>
+                <li><i data-lucide="rocket"></i>Mise en production</li>
+              </ul>
+            </div>
+
+            <div class="plus-separator">+</div>
+
+            <!-- LITE Option -->
+            <div
+              class="simulator-card selectable-card"
+              data-plan="lite"
+              data-price-initial="4400"
+              data-price-monthly="299"
+              data-price-annual="2990"
+            >
+              <h4 class="simulator-card-title">LITE</h4>
+              <div class="simulator-card-price">
+                <span class="annual-discount">2 mois offerts</span>
+                <span class="sim-price-monthly">
+                  <span class="sim-price-main"
+                    >299€<span class="sim-period"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >mois</span
+                    ></span
+                  >
+                  <span class="sim-price-sub"
+                    >2 990€<span style="font-size: 0.8rem; color: #9d9d9d"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >an</span
+                    ></span
+                  >
+                </span>
+                <span class="sim-price-annual">
+                  <span class="sim-price-main"
+                    >2 990€<span class="sim-period"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >an</span
+                    ></span
+                  >
+                  <span class="sim-price-sub"
+                    >299€<span style="font-size: 0.8rem; color: #9d9d9d"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >mois</span
+                    ></span
+                  >
+                </span>
+              </div>
+              <p class="sim-subtitle">
+                <span style="color: #9d9d9d; font-weight: 400"
+                  >Services inclus :</span
+                >
+              </p>
+              <ul class="sim-services">
+                <li><i data-lucide="server"></i>Hébergement</li>
+                <li><i data-lucide="message-circle"></i>Support client</li>
+                <li><i data-lucide="terminal"></i>Logs 24h (temps réel)</li>
+                <li><i data-lucide="wrench"></i>Correctifs en cas de panne</li>
+                <li>
+                  <i data-lucide="layers-plus"></i>Serveur sup. : +70 € / mois
+                </li>
+              </ul>
+              <div class="select-indicator">✓</div>
+            </div>
+
+            <!-- PLUS Option -->
+            <div
+              class="simulator-card selectable-card recommended-sim"
+              data-plan="plus"
+              data-price-initial="4400"
+              data-price-monthly="499"
+              data-price-annual="4990"
+            >
+              <span class="sim-badge">Recommandée</span>
+              <h4 class="simulator-card-title">PLUS</h4>
+              <div class="simulator-card-price">
+                <span class="annual-discount">2 mois offerts</span>
+                <span class="sim-price-monthly">
+                  <span class="sim-price-main"
+                    >499€<span class="sim-period"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >mois</span
+                    ></span
+                  >
+                  <span class="sim-price-sub"
+                    >4 990€<span style="font-size: 0.8rem; color: #9d9d9d"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >an</span
+                    ></span
+                  >
+                </span>
+                <span class="sim-price-annual">
+                  <span class="sim-price-main"
+                    >4 990€<span class="sim-period"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >an</span
+                    ></span
+                  >
+                  <span class="sim-price-sub"
+                    >499€<span style="font-size: 0.8rem; color: #9d9d9d"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >mois</span
+                    ></span
+                  >
+                </span>
+              </div>
+              <p class="sim-subtitle">
+                <span style="color: #9d9d9d; font-weight: 400"
+                  >Tous les services</span
+                >
+                <span style="color: #4fd1c5; font-weight: 700">LITE</span>
+                <span style="color: #9d9d9d; font-weight: 400">et :</span>
+              </p>
+              <ul class="sim-services">
+                <li>
+                  <i data-lucide="triangle-alert"></i>Supervision des erreurs
+                </li>
+                <li>
+                  <i data-lucide="shield-check"></i>Mises à jour sécurité &
+                  compatibilité
+                </li>
+                <li>
+                  <i data-lucide="file-search-corner"></i>Logs avec historique
+                  30 jours
+                </li>
+                <li>
+                  <i data-lucide="calendar-check-2"></i>1 journée d'intervention
+                  / mois
+                </li>
+                <li>
+                  <i data-lucide="layers-plus"></i>Serveur sup. : +90 € / mois
+                </li>
+              </ul>
+              <div class="select-indicator">✓</div>
+            </div>
+
+            <!-- PRO Option -->
+            <div
+              class="simulator-card selectable-card pro-sim"
+              data-plan="pro"
+              data-price-initial="4400"
+              data-price-monthly="799"
+              data-price-annual="7990"
+            >
+              <h4 class="simulator-card-title">PRO</h4>
+              <div class="simulator-card-price">
+                <span class="annual-discount">2 mois offerts</span>
+                <span class="sim-price-monthly">
+                  <span class="sim-price-main"
+                    >799€<span class="sim-period"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >mois</span
+                    ></span
+                  >
+                  <span class="sim-price-sub"
+                    >7 990€<span style="font-size: 0.8rem; color: #9d9d9d"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >an</span
+                    ></span
+                  >
+                </span>
+                <span class="sim-price-annual">
+                  <span class="sim-price-main"
+                    >7 990€<span class="sim-period"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >an</span
+                    ></span
+                  >
+                  <span class="sim-price-sub"
+                    >799€<span style="font-size: 0.8rem; color: #9d9d9d"
+                      ><span style="margin: 0 1px; display: inline-block"
+                        >/</span
+                      >mois</span
+                    ></span
+                  >
+                </span>
+              </div>
+              <p class="sim-subtitle">
+                <span style="color: #9d9d9d; font-weight: 400"
+                  >Tous les services</span
+                >
+                <span style="color: #7cb8f7; font-weight: 700">PLUS</span>
+                <span style="color: #9d9d9d; font-weight: 400">et :</span>
+              </p>
+              <ul class="sim-services">
+                <li>
+                  <i data-lucide="sliders-horizontal"></i>Ajustements avancés
+                </li>
+                <li><i data-lucide="headset"></i>Support client prioritaire</li>
+                <li>
+                  <i data-lucide="folder-archive"></i>Logs avec historique 90
+                  jours
+                </li>
+                <li>
+                  <i data-lucide="calendar-check-2"></i>2 journées
+                  d'intervention / mois
+                </li>
+                <li>
+                  <i data-lucide="layers-plus"></i>Serveur sup. : +120 € / mois
+                </li>
+              </ul>
+              <div class="select-indicator">✓</div>
+            </div>
+          </div>
+
+          <!-- Modern Pricing Summary -->
+          <div class="pricing-summary-container">
+            <!-- Recap Card -->
+            <div class="pricing-recap-card">
+              <div class="recap-header">
+                <div class="recap-header-left">
+                  <h4>Votre offre personnalisée</h4>
+                  <p class="recap-subtitle">Détails de votre solution</p>
+                </div>
+                <!-- Toggle Section -->
+                <div
+                  class="pricing-toggle-inline"
+                  id="pricingToggleContainer"
+                  style="visibility: hidden"
+                >
+                  <button class="toggle-btn active" data-period="monthly">
+                    Mensuel
+                  </button>
+                  <button class="toggle-btn" data-period="annual">
+                    Annuel
+                  </button>
+                  <input
+                    type="checkbox"
+                    id="pricingToggle"
+                    style="display: none"
+                  />
+                </div>
+              </div>
+
+              <div class="recap-content">
+                <!-- Default Integration Display -->
+                <div class="recap-section" id="defaultIntegration">
+                  <div class="recap-icon">
+                    <i data-lucide="code"></i>
+                  </div>
+                  <div class="recap-details">
+                    <div class="recap-item-title">Intégration initiale</div>
+                    <div class="recap-item-desc">
+                      50% avant développement, 50% à la livraison
+                    </div>
+                  </div>
+                  <div class="recap-price">
+                    <span class="recap-amount">4 400€</span>
+                    <span class="recap-period">unique</span>
+                  </div>
+                </div>
+
+                <!-- Selected Plan Info -->
+                <div
+                  class="recap-plan-card"
+                  id="selectedPlanInfo"
+                  style="display: none"
+                >
+                  <div class="recap-section-header">
+                    <div class="recap-icon" id="recapPlanIcon">
+                      <i data-lucide="package"></i>
+                    </div>
+                    <div class="recap-details">
+                      <div class="recap-item-title" id="recapPlanTitle">
+                        Sélectionnez une offre
+                      </div>
+                      <div class="recap-item-desc">Services inclus :</div>
+                    </div>
+                    <div class="recap-price">
+                      <span class="recap-amount" id="recapPlanPrice">0€</span>
+                      <span class="recap-period" id="recapPlanPeriod"
+                        >/mois</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Services List -->
+                  <div
+                    class="plan-services-grid"
+                    id="recapServicesList"
+                    style="display: none"
+                  ></div>
+                </div>
+
+                <!-- Divider -->
+                <div
+                  class="recap-divider"
+                  id="recapDivider"
+                  style="display: none"
+                ></div>
+
+                <!-- Year Totals -->
+                <div
+                  class="recap-years-section"
+                  id="recapYears"
+                  style="display: none"
+                >
+                  <div class="year-block year-1">
+                    <div class="year-label">Année 1</div>
+                    <div class="year-amount" id="year1Amount">4 400€</div>
+                  </div>
+                  <div class="year-block year-2">
+                    <div class="year-label">Année 2</div>
+                    <div class="year-amount" id="year2Amount">0€</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Une question sur ces offres ?</h2>
+        <p>Je reste disponible pour discuter de vos besoins spécifiques.</p>
+        <button class="cta-button">Discuter du projet</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Tous droits réservés</p>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      // Price Simulator Logic
+      const selectableCards = document.querySelectorAll(".selectable-card");
+      const pricingToggle = document.getElementById("pricingToggle");
+      const toggleBtns = document.querySelectorAll(".toggle-btn");
+      const toggleContainer = document.getElementById("pricingToggleContainer");
+      const annualDiscounts = document.querySelectorAll(".annual-discount");
+
+      // Recap elements
+      const defaultIntegration = document.getElementById("defaultIntegration");
+      const selectedPlanInfo = document.getElementById("selectedPlanInfo");
+      const recapPlanIcon = document.getElementById("recapPlanIcon");
+      const recapPlanTitle = document.getElementById("recapPlanTitle");
+      const recapPlanPrice = document.getElementById("recapPlanPrice");
+      const recapPlanPeriod = document.getElementById("recapPlanPeriod");
+      const recapServicesList = document.getElementById("recapServicesList");
+      const recapDivider = document.getElementById("recapDivider");
+      const recapYears = document.getElementById("recapYears");
+      const year1Amount = document.getElementById("year1Amount");
+      const year2Amount = document.getElementById("year2Amount");
+
+      let isAnnual = false;
+      let selectedCard = null;
+
+      const planDetails = {
+        lite: {
+          title: "LITE",
+          desc: "Hébergement + Maintenance + Support",
+          services: [
+            { key: "hosting", text: "Hébergement", level: "lite" },
+            { key: "support", text: "Support client", level: "lite" },
+            { key: "logs", text: "Logs 24h (temps réel)", level: "lite" },
+            { key: "fixes", text: "Correctifs en cas de panne", level: "lite" },
+            {
+              key: "server",
+              text: "Serveur sup. : +70 € / mois",
+              level: "lite",
+            },
+          ],
+        },
+        plus: {
+          title: "PLUS",
+          desc: "LITE + Évolutions + Support prioritaire",
+          services: [
+            { key: "hosting", text: "Hébergement", level: "lite" },
+            { key: "support", text: "Support client", level: "lite" },
+            {
+              key: "logs",
+              text: "Logs avec historique 30 jours",
+              level: "plus",
+            },
+            { key: "fixes", text: "Correctifs en cas de panne", level: "lite" },
+            {
+              key: "monitoring",
+              text: "Supervision des erreurs",
+              level: "plus",
+            },
+            {
+              key: "updates",
+              text: "Mises à jour sécurité & compatibilité",
+              level: "plus",
+            },
+            {
+              key: "intervention",
+              text: "1 journée d'intervention / mois",
+              level: "plus",
+            },
+            {
+              key: "server",
+              text: "Serveur sup. : +90 € / mois",
+              level: "plus",
+            },
+          ],
+        },
+        pro: {
+          title: "PRO",
+          desc: "PLUS + Interventions + Ressources étendues",
+          services: [
+            { key: "hosting", text: "Hébergement", level: "lite" },
+            {
+              key: "support",
+              text: "Support client prioritaire",
+              level: "pro",
+            },
+            {
+              key: "logs",
+              text: "Logs avec historique 90 jours",
+              level: "pro",
+            },
+            { key: "fixes", text: "Correctifs en cas de panne", level: "lite" },
+            {
+              key: "monitoring",
+              text: "Supervision des erreurs",
+              level: "plus",
+            },
+            {
+              key: "updates",
+              text: "Mises à jour sécurité & compatibilité",
+              level: "plus",
+            },
+            { key: "adjustments", text: "Ajustements avancés", level: "pro" },
+            {
+              key: "intervention",
+              text: "2 journées d'intervention / mois",
+              level: "pro",
+            },
+            {
+              key: "server",
+              text: "Serveur sup. : +120 € / mois",
+              level: "pro",
+            },
+          ],
+        },
+      };
+
+      // Toggle between monthly and annual
+      pricingToggle.addEventListener("change", function () {
+        isAnnual = this.checked;
+
+        // Update toggle buttons
+        toggleBtns.forEach((btn) => {
+          if (
+            (btn.dataset.period === "annual" && isAnnual) ||
+            (btn.dataset.period === "monthly" && !isAnnual)
+          ) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+
+        // Show/hide discount badges
+        annualDiscounts.forEach((badge) => {
+          if (isAnnual) {
+            badge.classList.add("show");
+          } else {
+            badge.classList.remove("show");
+          }
+        });
+
+        // Update all card prices
+        selectableCards.forEach((card) => {
+          const monthlyPrice = card.querySelector(".sim-price-monthly");
+          const annualPrice = card.querySelector(".sim-price-annual");
+
+          if (isAnnual) {
+            monthlyPrice.style.display = "none";
+            annualPrice.style.display = "block";
+          } else {
+            monthlyPrice.style.display = "block";
+            annualPrice.style.display = "none";
+          }
+        });
+
+        // Update total if a card is selected
+        if (selectedCard) {
+          updateTotal(selectedCard);
+        }
+      });
+
+      // Toggle options click handling
+      toggleBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const period = btn.dataset.period;
+          pricingToggle.checked = period === "annual";
+          pricingToggle.dispatchEvent(new Event("change"));
+        });
+      });
+
+      // Card selection and activation
+      selectableCards.forEach((card, index) => {
+        card.addEventListener("click", function () {
+          // Check if this card is already selected
+          if (this.classList.contains("selected")) {
+            // Deselect the card
+            this.classList.remove("active");
+            this.classList.remove("selected");
+            selectedCard = null;
+
+            // Reset z-index for all cards
+            selectableCards.forEach((c) => {
+              c.style.zIndex = "";
+            });
+
+            // Hide selection info, show only default
+            selectedPlanInfo.style.display = "none";
+            recapServicesList.style.display = "none";
+            recapDivider.style.display = "none";
+            recapYears.style.display = "none";
+            defaultIntegration.style.display = "flex";
+            toggleContainer.style.visibility = "hidden";
+
+            return;
+          }
+
+          // Remove active and selected class from all cards
+          selectableCards.forEach((c) => {
+            c.classList.remove("active");
+            c.classList.remove("selected");
+            c.style.zIndex = "";
+          });
+
+          // Add active and selected class to clicked card
+          this.classList.add("active");
+          this.classList.add("selected");
+          selectedCard = this;
+
+          // Set z-index based on which card is selected
+          const clickedIndex = Array.from(selectableCards).indexOf(this);
+
+          if (clickedIndex === 0) {
+            // LITE selected: LITE (10) > PLUS (5) > PRO (3)
+            selectableCards[0].style.zIndex = "10";
+            selectableCards[1].style.zIndex = "5";
+            selectableCards[2].style.zIndex = "3";
+          } else if (clickedIndex === 1) {
+            // PLUS selected: PLUS (10) > LITE & PRO (2)
+            selectableCards[0].style.zIndex = "2";
+            selectableCards[1].style.zIndex = "10";
+            selectableCards[2].style.zIndex = "2";
+          } else if (clickedIndex === 2) {
+            // PRO selected: PRO (10) > PLUS (5) > LITE (3)
+            selectableCards[0].style.zIndex = "3";
+            selectableCards[1].style.zIndex = "5";
+            selectableCards[2].style.zIndex = "10";
+          }
+
+          // Update total price
+          updateTotal(this);
+        });
+      });
+
+      function updateTotal(card) {
+        const plan = card.dataset.plan;
+        const monthlyPrice = parseInt(card.dataset.priceMonthly);
+        const annualPrice = parseInt(card.dataset.priceAnnual);
+        const initialCost = 4400;
+
+        // Keep default visible, show selection and toggle
+        defaultIntegration.style.display = "flex";
+        selectedPlanInfo.style.display = "block";
+        recapServicesList.style.display = "block";
+        recapDivider.style.display = "block";
+        recapYears.style.display = "flex";
+        toggleContainer.style.visibility = "visible";
+
+        // Update plan details
+        const planInfo = planDetails[plan];
+        recapPlanTitle.textContent = planInfo.title;
+
+        // Add plan class to recap card for color styling
+        selectedPlanInfo.className = `recap-plan-card plan-${plan}`;
+
+        // Define colors for each specific service
+        const serviceColors = {
+          Hébergement: { bg: "#e0f9f6", border: "#4fd1c5" },
+          "Support client": { bg: "#e0f9f6", border: "#4fd1c5" },
+          "Support client prioritaire": { bg: "#fef3e8", border: "#e6a871" },
+          "Logs 24h (temps réel)": { bg: "#e0f9f6", border: "#4fd1c5" },
+          "Logs avec historique 30 jours": { bg: "#dbeafe", border: "#7cb8f7" },
+          "Logs avec historique 90 jours": { bg: "#fef3e8", border: "#e6a871" },
+          "Correctifs en cas de panne": { bg: "#e0f9f6", border: "#4fd1c5" },
+          "Supervision des erreurs": { bg: "#dbeafe", border: "#7cb8f7" },
+          "Mises à jour sécurité & compatibilité": {
+            bg: "#dbeafe",
+            border: "#7cb8f7",
+          },
+          "Ajustements avancés": { bg: "#fef3e8", border: "#e6a871" },
+          "1 journée d'intervention / mois": {
+            bg: "#dbeafe",
+            border: "#7cb8f7",
+          },
+          "2 journées d'intervention / mois": {
+            bg: "#fef3e8",
+            border: "#e6a871",
+          },
+          "Serveur sup. : +70 € / mois": { bg: "#e0f9f6", border: "#4fd1c5" },
+          "Serveur sup. : +90 € / mois": { bg: "#dbeafe", border: "#7cb8f7" },
+          "Serveur sup. : +120 € / mois": { bg: "#fef3e8", border: "#e6a871" },
+        };
+
+        // Render services list with service-specific colors
+        recapServicesList.innerHTML = planInfo.services
+          .map((service) => {
+            const colors = serviceColors[service.text] || {
+              bg: "#f1f5f9",
+              border: "#cbd5e1",
+            };
+            return `
+          <div class="service-item" style="background-color: ${colors.bg}; border-color: ${colors.border};">
+            ${service.text}
+          </div>
+        `;
+          })
+          .join("");
+        lucide.createIcons();
+
+        if (isAnnual) {
+          recapPlanPrice.textContent =
+            annualPrice.toLocaleString("fr-FR") + "€";
+          recapPlanPeriod.textContent = "/an";
+
+          // Calculate totals for annual
+          const year1Total = initialCost + annualPrice;
+          const year2Total = annualPrice;
+
+          year1Amount.textContent = year1Total.toLocaleString("fr-FR") + "€";
+          year2Amount.textContent = year2Total.toLocaleString("fr-FR") + "€";
+        } else {
+          recapPlanPrice.textContent =
+            monthlyPrice.toLocaleString("fr-FR") + "€";
+          recapPlanPeriod.textContent = "/mois";
+
+          // Calculate totals for monthly (12 months per year)
+          const year1Total = initialCost + monthlyPrice * 12;
+          const year2Total = monthlyPrice * 12;
+
+          year1Amount.textContent = year1Total.toLocaleString("fr-FR") + "€";
+          year2Amount.textContent = year2Total.toLocaleString("fr-FR") + "€";
+        }
+      }
+    </script>
+  </body>
+</html>
