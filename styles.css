@@ -1,9 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
 
 :root {
+  /* Plan Colors */
   --color-lite: #4fd1c5;
   --color-plus: #7cb8f7;
   --color-pro: #e6a871;
+
+  /* Text Colors */
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #718096;
+  --color-text-muted: #9d9d9d;
+
+  /* UI Colors */
+  --color-border: #e2e8f0;
+  --color-primary-blue: #3d8dd7;
+  --color-bg-light: #f8f9fa;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(
+    rgb(45, 150, 235) 0%,
+    rgb(32, 112, 223) 100%
+  );
+  --gradient-card: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 50px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.85rem;
+  --font-base: 0.9rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+
+  /* Pricing - Central Configuration */
+  --initial-price: 4400;
+  --initial-price-display: "4 400€";
 }
 
 * {
@@ -277,7 +327,7 @@ body {
 main {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem 0;
 }
 
 /* Offers Section */
@@ -1540,4 +1590,142 @@ footer {
   .offer-card-recommended {
     transform: scale(1);
   }
+
+  /* Price Simulator Responsive */
+  .price-simulator {
+    padding: 2rem 1rem;
+  }
+
+  .simulator-title {
+    font-size: 1.5rem;
+  }
+
+  .simulator-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .simulator-grid {
+    flex-direction: column;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    min-height: auto;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .simulator-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 400px;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  .base-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .selectable-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .plus-separator {
+    display: block;
+    margin: 0;
+    position: static;
+    transform: none;
+    font-size: 2rem;
+    height: 40px;
+  }
+
+  .recap-header {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 1rem;
+  }
+
+  .pricing-toggle-inline {
+    position: static;
+    align-self: center;
+  }
+
+  .recap-plan-card {
+    padding: 0.75rem;
+  }
+
+  /* Hero Stats Responsive */
+  .hero-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    min-width: auto;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stat-value {
+    font-size: 1.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Utility Classes for Optimization */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.font-weight-normal {
+  font-weight: 400;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.period-separator {
+  margin: 0 1px;
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
