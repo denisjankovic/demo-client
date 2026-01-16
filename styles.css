@@ -21,6 +21,10 @@
     rgb(45, 150, 235) 0%,
     rgb(32, 112, 223) 100%
   );
+  --gradient-primary: linear-gradient(
+    rgb(45, 150, 235) 0%,
+    rgb(32, 112, 223) 100%
+  );
   --gradient-card: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 
   /* Spacing Scale */
@@ -96,11 +100,10 @@
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
 .jd-section span {
-  color: #1e293b;
+  color: #2d96eb;
   font-weight: 600;
 }
 
@@ -132,7 +135,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgb(45, 150, 235) 0%, rgb(32, 112, 223) 100%);
+  background: var(--gradient-primary);
   color: white;
   padding: 2rem 2rem 4rem;
   text-align: center;
@@ -168,70 +171,19 @@ body {
 }
 
 /* Top Bar */
-.hero-top-bar {
-  margin-bottom: 4rem;
-}
-
-.partner-logos {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 0;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-}
-
-.logo-item {
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.logo-item:hover {
-  background: white;
-}
-
-.logo-item:first-child {
-  border-radius: 16px 0 0 16px;
-}
-
-.logo-item:last-child {
-  border-radius: 0 16px 16px 0;
-}
-
-.partner-logo {
-  height: 32px;
-  width: auto;
-  object-fit: contain;
-}
-
-.logo-separator {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.1),
-    transparent
-  );
-}
-
 /* Main Title Area */
 .hero-main {
   margin-bottom: 3.5rem;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.75rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
@@ -243,15 +195,6 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.hero-content h1 {
-  font-size: 3.75rem;
-  font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
 }
 
 /* Stats Cards */
@@ -344,108 +287,6 @@ main {
   text-align: center;
 }
 
-.offers-grid {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
-  align-items: stretch;
-}
-
-.offers-grid-no-separators {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  align-items: stretch;
-}
-
-.plus-separator {
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: #cbd5e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin: 0 2.5rem;
-  z-index: 4;
-  height: 480px;
-}
-
-.ou-separator {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #b8c4d0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 1.5rem;
-}
-
-/* Offer Card */
-.offer-card {
-  flex: 1;
-  background: white;
-  border-radius: 12px;
-  padding: 2.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.offer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.offer-card-recommended {
-  transform: scale(1.02);
-}
-
-.recommended-badge {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: var(--color-plus);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.offer-card-pro {
-  transform: scale(1.02);
-}
-
-/* PLUS card colors */
-.offer-card-recommended .offer-title {
-  color: var(--color-plus);
-}
-
-.offer-card-recommended .price-initial {
-  color: var(--color-plus);
-}
-
-.offer-card-recommended .offer-features li i {
-  color: var(--color-plus);
-}
-
-/* PRO card colors */
-.offer-card-pro .offer-title {
-  color: var(--color-pro);
-}
-
-.offer-card-pro .price-initial {
-  color: var(--color-pro);
-}
-
-.offer-card-pro .offer-features li i {
-  color: var(--color-pro);
-}
-
 /* Simulator card colors for LITE */
 .selectable-card[data-plan="lite"] .simulator-card-title {
   color: var(--color-lite);
@@ -509,169 +350,165 @@ main {
   color: var(--color-pro) !important;
 }
 
-.offer-title {
-  font-size: 1.5rem;
-  color: #2d3748;
-  margin-bottom: 0.5rem;
+/* Contact Footer Section */
+.contact-footer {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-blue) 0%,
+    #2d7db8 100%
+  );
+  padding: 4.5rem 2rem;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.includes-badge {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: #667eea;
-  background: #f0f4ff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
+.contact-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.contact-footer-content {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-footer h2 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.contact-description {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-benefit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+}
+
+.contact-benefit i {
+  color: white;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.contact-benefit span {
+  font-size: 0.95rem;
+  color: white;
+  font-weight: 600;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: white;
+  color: var(--color-primary-blue);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-base);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background: #f8f9fa;
+}
+
+.contact-button i {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-button span {
+  font-weight: 700;
+}
+
+.contact-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 3rem auto;
+}
+
+.contact-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-question p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
   font-weight: 500;
 }
 
-.offer-card-recommended .includes-badge {
-  color: var(--color-plus);
-  background: #f0f7ff;
-}
-
-.offer-card-pro .includes-badge {
-  color: var(--color-pro);
-  background: #fff8f0;
-}
-
-.offer-subtitle {
-  color: #718096;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-}
-
-.offer-price {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #e2e8f0;
-}
-
-.price-initial {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2d3748;
-  display: block;
-  margin-bottom: 0;
-}
-
-.price-then {
-  display: block;
-  font-size: 0.9rem;
-  color: #718096;
-  margin: 1rem 0 0.5rem 0;
-  font-style: italic;
-}
-
-.price-period {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #2d3748;
-}
-
-.price-label {
-  font-size: 1rem;
-  color: #718096;
-  display: block;
-  margin-top: -0.65rem;
-}
-
-.offer-features {
-  list-style: none;
-  margin-bottom: 2rem;
-  flex-grow: 1;
-}
-
-.offer-features li {
-  padding: 0.5rem 0;
-  padding-left: 0;
-  position: relative;
-  color: #4a5568;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-size: 0.9rem;
-  line-height: 1.1;
-}
-
-.offer-features li i {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  color: #667eea;
-}
-
-.offer-features li::before {
-  content: none;
-}
-
-.offer-button {
-  width: 100%;
-  padding: 0.9rem 1.5rem;
-  border: 2px solid #667eea;
-  background: white;
-  color: #667eea;
-  font-size: 1rem;
+.contact-email {
+  font-size: 1.15rem;
+  color: white;
+  text-decoration: none;
   font-weight: 600;
+  transition: var(--transition-base);
+  padding: 0.5rem 1rem;
   border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.offer-button:hover {
-  background: #667eea;
-  color: white;
-}
-
-.offer-button-primary {
-  background: #667eea;
-  color: white;
-}
-
-.offer-button-primary:hover {
-  background: #5568d3;
-  border-color: #5568d3;
-}
-
-/* CTA Section */
-.cta-section {
-  text-align: center;
-  background: white;
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-section h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #2d3748;
-}
-
-.cta-section p {
-  font-size: 1.1rem;
-  color: #718096;
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #3d8dd7 0%, var(--color-plus) 100%);
-  color: white;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(61, 141, 215, 0.4);
-  background: linear-gradient(135deg, #357ab8 0%, #6aa8e8 100%);
+.contact-email:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Price Simulator */
@@ -680,6 +517,8 @@ main {
   padding: 3.5rem 2.5rem;
   border-radius: 12px;
   overflow-x: visible;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .simulator-title {
@@ -799,7 +638,7 @@ input:checked + .slider:before {
 }
 
 .toggle-btn.active {
-  background: linear-gradient(rgb(45, 150, 235) 0%, rgb(32, 112, 223) 100%);
+  background: var(--gradient-primary);
   color: white;
   box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
 }
@@ -927,14 +766,29 @@ input:checked + .slider:before {
   box-sizing: border-box;
 }
 
-/* Default state - PLUS in front */
+/* Plus Separator Between Base and LITE */
+.plus-separator {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0 2rem;
+  z-index: 4;
+  height: 480px;
+  line-height: 1;
+}
+
+/* Default state - PLUS highlighted (not selected, just visually prominent) */
 /* LITE - Left card */
 .selectable-card:nth-of-type(3) {
   z-index: 2;
   margin-right: -90px;
 }
 
-/* PLUS - Center card, overlaps both by default */
+/* PLUS - Center card, visually emphasized by default */
 .selectable-card:nth-of-type(4) {
   z-index: 3;
   margin-right: -90px;
@@ -1454,13 +1308,6 @@ input:checked + .slider:before {
   letter-spacing: 1px;
 }
 
-.recap-total-main-label {
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .recap-total-main-value {
   text-align: right;
 }
@@ -1601,18 +1448,6 @@ footer {
     font-size: 1rem;
   }
 
-  .hero-indicators {
-    gap: 2rem;
-  }
-
-  .offers-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .offer-card-recommended {
-    transform: scale(1);
-  }
-
   /* Price Simulator Responsive */
   .price-simulator {
     padding: 2rem 1rem;
@@ -1713,6 +1548,42 @@ footer {
 
   .stat-label {
     font-size: 0.8rem;
+  }
+
+  /* CTA Section Responsive */
+  .contact-footer {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .contact-footer h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-benefits {
+    gap: 2rem;
+  }
+
+  .contact-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .contact-button span {
+    font-size: 0.95rem;
+  }
+
+  .contact-divider {
+    margin: 2.5rem auto;
+  }
+
+  .contact-email {
+    font-size: 1rem;
   }
 }
 
