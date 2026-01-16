@@ -1019,12 +1019,19 @@ input:checked + .slider:before {
   border-color: #3d8dd7;
 }
 
-.recommended-sim.selected {
-  border-color: var(--color-plus);
+.lite-sim.active.selected {
+  border-color: var(--color-lite);
+  outline: 1px solid var(--color-lite);
 }
 
-.pro-sim.selected {
+.recommended-sim.active.selected {
+  border-color: var(--color-plus);
+  outline: 1px solid var(--color-plus);
+}
+
+.pro-sim.active.selected {
   border-color: var(--color-pro);
+  outline: 1px solid var(--color-pro);
 }
 
 .sim-badge {
@@ -1213,6 +1220,10 @@ input:checked + .slider:before {
 .selectable-card.selected .select-indicator {
   opacity: 1;
   background: #3d8dd7;
+}
+
+.lite-sim.selected .select-indicator {
+  background: var(--color-lite);
 }
 
 .recommended-sim.selected .select-indicator {
