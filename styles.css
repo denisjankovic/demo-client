@@ -1477,7 +1477,7 @@ footer {
     max-width: 400px;
     height: auto;
     min-height: 400px;
-    margin: 0 !important;
+    margin: 1rem 0 !important;
     transform: none !important;
     z-index: auto !important;
   }
@@ -1832,12 +1832,21 @@ footer {
   }
 
   .footer-bottom {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     gap: 1rem;
   }
+
+  .footer-bottom-links {
+    flex-direction: column;
+  }
+
+  .footer-dot {
+    dispaly: none;
+  }
 }
+
 
 
 
