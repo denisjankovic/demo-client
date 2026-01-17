@@ -116,6 +116,7 @@
   margin: 0 0.5rem;
   font-size: 1.5rem;
   opacity: 0.9;
+  align-self: center;
 }
 
 .top-header-logo {
@@ -1838,3 +1839,4 @@ footer {
     gap: 1rem;
   }
 }
+
