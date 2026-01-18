@@ -1454,7 +1454,7 @@ footer {
 
   /* Price Simulator Responsive */
   .price-simulator {
-    padding: 2rem 1rem;
+    padding: 0;
   }
 
   .simulator-title {
@@ -1467,7 +1467,7 @@ footer {
 
   .simulator-grid {
     flex-direction: column;
-    padding: 0;
+    padding: 0 1rem;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 2rem;
@@ -1858,6 +1858,7 @@ footer {
     flex-direction: column;
   }
 }
+
 
 
 
