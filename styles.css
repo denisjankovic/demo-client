@@ -273,6 +273,10 @@ main {
   padding: 3rem 0;
 }
 
+.offers-section {
+  padding: 0 1rem;
+}
+
 /* Offers Section */
 .offers-section h2 {
   font-size: 2rem;
@@ -1509,6 +1513,10 @@ footer {
     gap: 1rem;
   }
 
+  .recap-icon {
+    display: none;
+  }
+
   .pricing-toggle-inline {
     position: static;
     align-self: center;
@@ -1835,17 +1843,22 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    gap: 1rem;
   }
 
   .footer-bottom-links {
     flex-direction: column;
+    gap: 2rem;
   }
 
   .footer-dot {
     display: none;
   }
+
+  .recap-years-section {
+    flex-direction: column;
+  }
 }
+
 
 
 
