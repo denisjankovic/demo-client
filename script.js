@@ -340,7 +340,7 @@ function updateTotal(card) {
     isAnnual,
     monthlyPrice,
     annualPrice,
-    initialCost
+    initialCost,
   );
 }
 
@@ -350,7 +350,7 @@ function saveSelectionToLocalStorage(
   isAnnual,
   monthlyPrice,
   annualPrice,
-  initialCost
+  initialCost,
 ) {
   const selection = {
     plan: plan,
@@ -375,7 +375,7 @@ function loadSelectionFromLocalStorage() {
 
       // Find the card that matches the saved plan
       const savedCard = Array.from(selectableCards).find(
-        (card) => card.dataset.plan === selection.plan
+        (card) => card.dataset.plan === selection.plan,
       );
 
       if (savedCard) {
@@ -408,14 +408,14 @@ function resetContactButton() {
   if (!contactButton) return;
 
   const emailSubject = encodeURIComponent(
-    "Demande de devis - Intégration BackYou × HubSpot"
+    "Demande de devis - Intégration BackYou × HubSpot",
   );
   const emailBody = encodeURIComponent(
     `Bonjour,\n\n` +
       `Je souhaite recevoir un devis pour les prestations suivantes :\n\n` +
       `    • Intégration initiale : 4 400€ (développement initial)\n\n` +
       `Merci de me contacter pour finaliser cette demande.\n\n` +
-      `Cordialement`
+      `Cordialement`,
   );
 
   contactButton.href = `mailto:jankovicdenis.jd@gmail.com?subject=${emailSubject}&body=${emailBody}`;
@@ -441,7 +441,7 @@ function updateContactButton(plan, isAnnual, monthlyPrice, annualPrice) {
   const initialCost = parseInt(initialCostStr) || 4400;
 
   const emailSubject = encodeURIComponent(
-    "Demande de devis - Intégration BackYou × HubSpot"
+    "Demande de devis - Intégration BackYou × HubSpot",
   );
 
   const indent = "    ";
@@ -451,7 +451,7 @@ function updateContactButton(plan, isAnnual, monthlyPrice, annualPrice) {
       `Je souhaite recevoir un devis pour les prestations suivantes :\n\n` +
       `${indent}• Intégration initiale : 4 400€ (développement initial)\n` +
       `${indent}• Offre ${planName} : ${price.toLocaleString(
-        "fr-FR"
+        "fr-FR",
       )}€/${period}\n` +
       `${indent}• Facturation : ${
         isAnnual ? "Annuelle (2 mois offerts)" : "Mensuelle"
@@ -460,8 +460,38 @@ function updateContactButton(plan, isAnnual, monthlyPrice, annualPrice) {
         initialCost + (isAnnual ? price : price * 12)
       ).toLocaleString("fr-FR")}€\n\n` +
       `Merci de me contacter pour finaliser cette demande.\n\n` +
-      `Cordialement`
+      `Cordialement`,
   );
 
   contactButton.href = `mailto:jankovicdenis.jd@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 }
+
+// FAQ Accordion functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // Close all other items
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+
+      // Toggle current item
+      if (isActive) {
+        item.classList.remove("active");
+      } else {
+        item.classList.add("active");
+      }
+
+      // Recreate icons after DOM changes
+      lucide.createIcons();
+    });
+  });
+});
