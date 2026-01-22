@@ -127,7 +127,11 @@ body {
   font-family: "Google Sans Flex", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "ROND" 0;
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
@@ -150,7 +154,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 20% 50%,
       rgba(255, 255, 255, 0.08) 0%,
       transparent 50%
@@ -270,7 +275,7 @@ body {
 main {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 0 0;
 }
 
 .offers-section {
@@ -375,7 +380,8 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 20% 50%,
       rgba(255, 255, 255, 0.1) 0%,
       transparent 50%
@@ -436,10 +442,18 @@ main {
 }
 
 .contact-benefit i {
-  color: white;
+  color: white !important;
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+}
+
+.contact-benefit svg {
+  stroke: white !important;
+}
+
+.contact-benefit svg * {
+  stroke: white !important;
 }
 
 .contact-benefit span {
@@ -518,7 +532,7 @@ main {
 /* Price Simulator */
 .price-simulator {
   background: #f8fafc;
-  padding: 3.5rem 2.5rem;
+  padding: 3.5rem 2.5rem 5.5rem;
   border-radius: 12px;
   overflow-x: visible;
   max-width: 1400px;
@@ -1058,6 +1072,16 @@ input:checked + .slider:before {
   stroke: #2d3748;
 }
 
+.price-disclaimer {
+  font-size: 0.75rem;
+  color: #9da2b3;
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
 .select-indicator {
   position: absolute;
   top: 15px;
@@ -1433,6 +1457,170 @@ input:checked + .slider:before {
   font-weight: 300;
 }
 
+/* ===========================
+   PRICING LEGAL TERMS
+   =========================== */
+
+.pricing-legal-terms {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+}
+
+.legal-term {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.legal-term:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.legal-term strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.legal-footnotes {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.legal-footnotes p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #718096;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  padding-left: 0.25rem;
+}
+
+.legal-footnotes p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-footnotes sup {
+  color: #2d3748;
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.sim-services sup {
+  color: #718096;
+  font-size: 0.7rem;
+  margin-left: 0.05rem;
+  font-weight: 500;
+}
+
+.sim-services li span {
+  display: inline;
+}
+
+/* ===========================
+   FAQ SECTION
+   =========================== */
+
+.faq-section {
+  background-color: white;
+  padding: 4rem 0;
+  margin: 0;
+  width: 100%;
+  box-shadow:
+    0 -8px 20px -3px rgba(0, 0, 0, 0.04),
+    0 -4px 8px -2px rgba(0, 0, 0, 0.02);
+}
+
+.faq-section > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid #cbd5e0;
+  margin-bottom: 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #cbd5e0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #2d96eb;
+}
+
+.faq-question span {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: #718096;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #2d96eb;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+  padding: 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1.25rem;
+}
+
+.faq-answer p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -1580,6 +1768,48 @@ footer {
     width: 100%;
     padding: 1rem 2rem;
     font-size: 1rem;
+  }
+
+  /* FAQ Responsive */
+  .faq-section {
+    padding: 4rem 1.5rem 3rem;
+    margin-top: 3rem;
+  }
+
+  .faq-section > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .faq-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 1rem 0;
+  }
+
+  .faq-answer p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  /* Legal Terms Responsive */
+  .pricing-legal-terms {
+    margin: 0 1rem;
+    padding: 0;
+  }
+
+  .legal-term {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .legal-footnotes p {
+    font-size: 0.65rem;
+    line-height: 1.4;
   }
 
   .contact-button span {
@@ -1858,10 +2088,3 @@ footer {
     flex-direction: column;
   }
 }
-
-
-
-
-
-
-
